@@ -1,0 +1,44 @@
+# Задание №1
+# Сначала вводится число N, затем вводится N целых чисел.
+# Подсчитываем, сколько из них равны нулю.
+
+N = int(input())
+count_zero = 0
+
+for i in range(N):
+    num = int(input())
+    if num == 0:
+        count_zero += 1
+
+print(count_zero)
+
+
+# Задание №2
+# Вводится натуральное число X.
+# Считаем количество натуральных делителей числа X.
+
+X = int(input())
+divisors = 0
+i = 1
+
+while i * i <= X:
+    if X % i == 0:
+        if i * i == X:
+            divisors += 1
+        else:
+            divisors += 2
+    i += 1
+
+print(divisors)
+
+
+# Задание №3
+# Вводятся числа A и B.
+# Выводим все четные числа на отрезке от A до B.
+
+A = int(input())
+B = int(input())
+
+for i in range(A, B + 1):
+    if i % 2 == 0:
+        print(i, end=" ")
